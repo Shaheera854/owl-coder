@@ -1,0 +1,12 @@
+public:
+	int TotalWays(int N)
+	{
+	    // Code here int mod=1e9+7;
+	    long long a=1,b=1,c=2;
+	    for(int i=2;i<=N;i++){
+	        a=b;
+	        b=c;
+	        c=(a+b)%1000000007;
+	    }
+	    return (c*c)%1000000007;
+	}
